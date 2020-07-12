@@ -1,4 +1,4 @@
-(defproject clojure-web-api-skeleton "0.1.0-SNAPSHOT"
+(defproject clojure-web-api-skeleton "1.0.0"
   :description "This is a skeleton project for an API server using Clojure, Compojure, Ring, Component, and PostgreSQL"
   :url "http://github.com/indiedvlpr/clojure-web-api-skeleton"
   :license {:name "EPL-2.0 OR GPL-2.0-or-later WITH Classpath-exception-2.0"
@@ -13,4 +13,5 @@
                  [org.postgresql/postgresql "42.2.10.jre7"]
                  [com.stuartsierra/component "0.4.0"]
                  [migratus "1.2.8"]]
+  :main ^:skip-aot clojure-web-api-skeleton.core
   :repl-options {:init-ns clojure-web-api-skeleton.core})
