@@ -17,14 +17,13 @@
   (when server
     (dissoc server :server)))
 
-(defrecord WebServer [database port]
+(defrecord WebServer [port]
   component/Lifecycle
   (start [this]
     (assoc this :server (start-server port)))
   (stop [this]
     (stop-server (:server this))))
 
-(defn web-server
+(defn web-server [port]
   "Map web server to component"
-  ([port]
-   (map->WebServer {:port port})))
+  (map->WebServer {:port port}))
