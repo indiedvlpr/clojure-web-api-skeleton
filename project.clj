@@ -9,7 +9,7 @@
                  [ring-cors "0.1.13"]
                  [compojure "1.6.1"]
                  [honeysql "0.9.8"]
-                 [seancorfield/next.jdbc "1.0.13"]
+                 [seancorfield/next.jdbc "1.1.569"]
                  [org.postgresql/postgresql "42.2.10.jre7"]
                  [com.stuartsierra/component "0.4.0"]
                  [migratus "1.2.8"]]

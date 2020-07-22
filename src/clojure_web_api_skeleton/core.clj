@@ -2,8 +2,9 @@
   (:require [clojure-web-api-skeleton.system.server :as server]
             [com.stuartsierra.component :as component]))
 
-(defn api [port]
+(defn api 
   "Set up API system map"
+  [port]
   (component/system-map :web-server (server/web-server port)))
 
 (defn -main [port]

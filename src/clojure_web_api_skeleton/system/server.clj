@@ -7,13 +7,15 @@
    :headers {"Content-Type" "text/plain"}
    :body "Hello Clojure, Hello Ring!"})
 
-(defn start-server [port]
+(defn start-server 
   "Helper function to start the server when the component's start function is called"
+  [port]
   (let [server (jetty/run-jetty handler {:port (Integer. port)})]
     server))
 
-(defn stop-server [server]
+(defn stop-server 
   "Helper function to stop the server when the component's stop function is called"
+  [server]
   (when server
     (dissoc server :server)))
 
@@ -22,8 +24,10 @@
   (start [this]
     (assoc this :server (start-server port)))
   (stop [this]
-    (stop-server (:server this))))
+    (stop-server (:server this))
+    (dissoc this :server)))
 
-(defn web-server [port]
+(defn web-server 
   "Map web server to component"
+  [port]
   (map->WebServer {:port port}))
